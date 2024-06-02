@@ -57,7 +57,7 @@ export default function About() {
           width={1536}
           height={1536}
           src="/images/sample_about.jpeg"
-          alt="Hey babes"
+          alt="About"
           className="md:mt-40  flex md:h-2/3 md:w-2/3 md:ml-60 border-dotted  rounded-lg"
         />
       </div>

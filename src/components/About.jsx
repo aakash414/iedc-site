@@ -18,7 +18,7 @@ function Check({ children }) {
 
 function Info_text() {
   return (
-    <div className="h-full flex flex-col  p-4 bg-[#E3FEF7]">
+    <div className="h-full flex flex-col  p-4 bg-emerald-200">
       <div className="font-black text-3xl antialiased mb-4">
         <h1>ABOUT US</h1>
       </div>
@@ -46,13 +46,13 @@ function Info_text() {
 
 export default function About() {
   return (
-    <div className="flex  flex-col md:flex-row bg-[#E3FEF7] min-h-screen ">
+    <div className="flex  flex-col md:flex-row bg-emerald-200 min-h-screen ">
       <div className="h-full md:w-1/2 md:mt-20 md:ml-20">
         <Info_text/>
       </div>
 
 
-      <div className="bg-[#E3FEF7]">
+      <div className="bg-emerald-200">
         <Image
           width={1536}
           height={1536}

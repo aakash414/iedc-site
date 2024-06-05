@@ -5,11 +5,11 @@ import React from 'react';
 
 function Check({ children }) {
   return (
-    <div className=" flex flex-row space-x-3 items-center">
+    <div className=" text-black flex flex-row space-x-3 items-center">
       <input
         type="checkbox"
         checked
-        className="shrink-0  w-5 h-5 form-checkbox focus:ring-indigo-500 h-5 w-5 rounded-full bg-gray-100 border-gray-300 disabled:checked:bg-blue-500 peer rounded"
+        className="shrink-0 form-checkbox focus:ring-indigo-500 h-5 w-5  bg-gray-100 border-gray-300 disabled:checked:bg-blue-500 peer rounded"
       />
       <p>{children}</p>
     </div>
@@ -18,7 +18,7 @@ function Check({ children }) {
 
 function Info_text() {
   return (
-    <div className="h-full flex flex-col  p-4 bg-emerald-200">
+    <div className="h-full flex flex-col text-black p-4 bg-emerald-200">
       <div className="font-black text-3xl antialiased mb-4">
         <h1>ABOUT US</h1>
       </div>

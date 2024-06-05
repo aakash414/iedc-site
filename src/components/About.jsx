@@ -5,7 +5,7 @@ import React from 'react';
 
 function Check({ children }) {
   return (
-    <div className=" flex flex-row space-x-3 items-center">
+    <div className=" text-black flex flex-row space-x-3 items-center">
       <input
         type="checkbox"
         checked
@@ -18,7 +18,7 @@ function Check({ children }) {
 
 function Info_text() {
   return (
-    <div className="h-full flex flex-col  p-4 bg-emerald-200">
+    <div className="h-full flex flex-col text-black p-4 bg-emerald-200">
       <div className="font-black text-3xl antialiased mb-4">
         <h1>ABOUT US</h1>
       </div>

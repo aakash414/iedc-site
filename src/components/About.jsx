@@ -9,7 +9,7 @@ function Check({ children }) {
       <input
         type="checkbox"
         checked
-        className="shrink-0  w-5 h-5 form-checkbox focus:ring-indigo-500 h-5 w-5 rounded-full bg-gray-100 border-gray-300 disabled:checked:bg-blue-500 peer rounded"
+        className="shrink-0 form-checkbox focus:ring-indigo-500 h-5 w-5  bg-gray-100 border-gray-300 disabled:checked:bg-blue-500 peer rounded"
       />
       <p>{children}</p>
     </div>

@@ -1,10 +1,20 @@
 import Image from 'next/image'
-import { Saira } from "next/dist/compiled/@next/font/dist/google";
+import { Poppins, Saira } from "next/font/google";
+
+const saira = Saira({
+              weight : '700',
+              subsets: ['latin'],
+})
+
+const poppins = Poppins({
+  weight:"400",
+  subsets: ["latin"]
+})
 function Info_text (){
   return(
-    <div className="flex flex-col p-6">
-      <h className={"text-5xl  font-bold text-white antialiasing mt-10"+Saira}  > CITTIC LOGO</h>
-      <p className="text-2xl mt-2 antialiased">
+    <div className="flex flex-col space-x-2 text-[#FFFFFF]">
+      <h className={"text-[40px] leading-[56px] antialised"+saira}> CITTIC LOGO</h>
+      <p className={"text-[16px] leading-[26px] antialised"+poppins}>
         CITTIC CUSAT provide a springboard to budding
         entreprenurs who wish to launch themselves
         into the world of technology based business
@@ -20,16 +30,17 @@ function Info_text (){
 
 export default function Cittic (){
   return (
-    <div className="flex flex-col md:flex-row h-screen  bg-[#003C43]">
-    <div className="bg-[#003C43] mt-10 md:w-1/2 md:mt-40 md:ml-20">
+    <div className="flex flex-col lg:flex-row lg:h-screen bg-[#003C43] px-[10vw] py-[8vw] space-y-1">
+    <div className="flex md:justify-center md:items-center md:w-1/2 bg-[#003C43]">
       <Info_text />
     </div>
-    <div className="mt-20 md:mt-60 bg-[#003c43]">
+    <div className="flex w-full bg-[#003C43]">
       <Image
         width={1500}
         height={1500}
         src="/images/citticlogo.svg"
-        className="bg-[#003C43]"
+        className="bg-[#003C43] "
+        alt="Cittic Logo"
       />
 
 

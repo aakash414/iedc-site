@@ -1,22 +1,28 @@
 import Image from "next/image";
-import { Saira } from "next/dist/compiled/@next/font/dist/google";
+import { Poppins, Saira } from "next/font/google";
+
+const saira = Saira({
+  weight: "700",
+  subsets: ["latin"],
+});
+
+const poppins = Poppins({
+  weight: "400",
+  subsets: ["latin"],
+});
 function Info_text() {
   return (
-    <div className="flex flex-col p-6">
-      <h
-        className={"antialiasing  mt-10 text-5xl font-bold text-white" + Saira}
-      >
+    <div className="flex flex-col space-x-2 text-[#FFFFFF]">
+      <h className={"antialised text-[40px] leading-[56px]" + saira}>
         {" "}
-        CITTIC
+        CITTIC LOGO
       </h>
-      <p className="p10 mt-2 pt-10 text-xl antialiased">
-        Centre for Innovation Technology Transfer and Industrial
-        Collaboration(CITTIC) CUSAT provide a springboard to budding
-        entreprenurs who wish to launch themselves into the world of technology
-        based business carrers. In CITTIC, bright ideas can be developed to a
-        product or service using advanced technology solutions. This innovation
-        centre is designed to provide all the support to make business ventures
-        successful.
+      <p className={"antialised text-[16px] leading-[26px]" + poppins}>
+        CITTIC CUSAT provide a springboard to budding entreprenurs who wish to
+        launch themselves into the world of technology based business carrers.
+        In CITTIC, bright ideas can be developed to a product or service using
+        advanced technology solutions. This innovation centre is designed to
+        provide all the support to make business ventures successful.
       </p>
     </div>
   );
@@ -24,16 +30,17 @@ function Info_text() {
 
 export default function Cittic() {
   return (
-    <div className="flex h-screen flex-col bg-[#003C43]  md:flex-row">
-      <div className="mt-10 bg-[#003C43] md:ml-20 md:mt-40 md:w-1/2">
+    <div className="flex flex-col space-y-1 bg-[#003C43] px-[10vw] py-[8vw] lg:h-screen lg:flex-row">
+      <div className="flex bg-[#003C43] md:w-1/2 md:items-center md:justify-center">
         <Info_text />
       </div>
-      <div className="mt-20 bg-[#003c43] md:mt-60">
+      <div className="flex w-full bg-[#003C43]">
         <Image
-          width={750}
-          height={750}
+          width={1500}
+          height={1500}
           src="/images/citticlogo.svg"
-          className="bg-[#003C43]"
+          className="bg-[#003C43] "
+          alt="Cittic Logo"
         />
       </div>
     </div>

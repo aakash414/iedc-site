@@ -76,7 +76,7 @@ export default function Home() {
         <Image
           width={1536}
           height={1536}
-          src="/images/sample_about.jpeg"
+          src="/images/about.jpg"
           alt="About"
           className=" rounded-lg lg:h-1/2  lg:w-3/4"
         />

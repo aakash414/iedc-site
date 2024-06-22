@@ -66,19 +66,19 @@ function Info_text() {
 export default function Home() {
   return (
     <div className="flex flex-col bg-[#E3FEF7] px-[10vw] py-[9vw]  md:flex-col lg:h-screen lg:flex-row">
-      <div className="w-full  bg-[#E3FEF7] md:h-full ">
+      <div className="w-full  bg-[#E3FEF7] md:h-full md:shrink">
         <div className="mx-auto  my-auto  flex">
           <Info_text />
         </div>
       </div>
 
-      <div className="flex h-full bg-[#E3FEF7] md:items-center md:justify-center lg:w-full">
+      <div className="flex bg-[#E3FEF7]">
         <Image
           width={1536}
           height={1536}
-          src="/images/sample_about.jpeg"
+          src="/images/about.jpg"
           alt="About"
-          className=" rounded-lg lg:h-1/2  lg:w-3/4"
+          className=" lg:h-[500px] lg:w-[1000px] md:w-[500px] rounded-t-2xl rounded-b-3xl border-2"
         />
       </div>
     </div>

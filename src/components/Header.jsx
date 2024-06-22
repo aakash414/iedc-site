@@ -11,7 +11,7 @@ const poppins = Poppins({
 
 const Header = () => {
   return (
-    <div className="flex bg-[#003C43] py-8">
+    <div className="flex bg-[#003C43] pt-8">
       <header className="mx-24 mt-4 flex w-full items-center justify-between rounded-full bg-white px-6 py-3 text-[#424955]">
         <Image src={IEDCLogo} alt="logo" />
         <ul className={`${poppins.variable} flex space-x-6`}>

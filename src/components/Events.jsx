@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import gsap from "gsap";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Event1 from "../../public/images/Event1.jpeg";
 const data = [
   {
     heading: "Innovate & Elevate: Empowering Entrepreneurs",

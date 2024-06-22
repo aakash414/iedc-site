@@ -63,7 +63,7 @@ function Info_text() {
     </div>
   );
 }
-export default function Home() {
+export default function About() {
   return (
     <div className="flex flex-col bg-[#E3FEF7] px-[10vw] py-[9vw]  md:flex-col lg:h-screen lg:flex-row">
       <div className="w-full  bg-[#E3FEF7] md:h-full md:shrink">
@@ -78,7 +78,7 @@ export default function Home() {
           height={1536}
           src="/images/about.jpg"
           alt="About"
-          className=" lg:h-[500px] lg:w-[1000px] md:w-[500px] rounded-t-2xl rounded-b-3xl border-2"
+          className=" rounded-b-3xl rounded-t-2xl border-2 md:w-[500px] lg:h-[500px] lg:w-[1000px]"
         />
       </div>
     </div>

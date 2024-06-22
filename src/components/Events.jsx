@@ -1,12 +1,9 @@
-// mark use client
 "use client"; // This is a client component 👈🏽
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import gsap from "gsap";
 import { motion } from "framer-motion";
-import Event1 from "../../public/images/Event1.jpeg";
 import Image from "next/image";
-
 const data = [
   {
     heading: "Innovate & Elevate: Empowering Entrepreneurs",
@@ -19,12 +16,24 @@ const data = [
     venue: "TBI Seminar hall, Amenity Centre",
   },
 ];
-
 const Card = ({ heading, icon, date, index, description, venue, time }) => {
-  const isMobile = window.innerWidth < 768;
-  useEffect(() => {
-    // Check if it's a mobile device
+  const [isMobile, setIsMobile] = useState(false);
 
+  useEffect(() => {
+    // Function to check window width
+    const checkIsMobile = () => setIsMobile(window.innerWidth < 768);
+
+    // Initial check
+    checkIsMobile();
+
+    // Add event listener for window resize
+    window.addEventListener("resize", checkIsMobile);
+
+    // Cleanup the event listener on component unmount
+    return () => window.removeEventListener("resize", checkIsMobile);
+  }, []);
+
+  useEffect(() => {
     // Apply animation only if it's not a mobile device
     if (!isMobile) {
       gsap.set(`.landing #img-${index}`, {
@@ -44,9 +53,6 @@ const Card = ({ heading, icon, date, index, description, venue, time }) => {
   }, [index, isMobile]);
 
   const handleHover = () => {
-    const isMobile = window.innerWidth < 768;
-
-    // Apply animation only if it's not a mobile device
     if (!isMobile) {
       gsap.to(`.landing #img-${index}`, {
         x: 0,
@@ -65,9 +71,6 @@ const Card = ({ heading, icon, date, index, description, venue, time }) => {
   };
 
   const handleHoverExit = () => {
-    const isMobile = window.innerWidth < 768;
-
-    // Apply animation only if it's not a mobile device
     if (!isMobile) {
       gsap.to(`.landing #img-${index}`, {
         x: "-100%",
@@ -92,7 +95,7 @@ const Card = ({ heading, icon, date, index, description, venue, time }) => {
       onMouseEnter={handleHover}
       onMouseLeave={handleHoverExit}
     >
-      <div className=" landing grid flex-1 grid-cols-12 ">
+      <div className="landing grid flex-1 grid-cols-12">
         <Image
           id={`img-${index}`}
           src={icon}
@@ -104,15 +107,15 @@ const Card = ({ heading, icon, date, index, description, venue, time }) => {
           className="col-span-12 flex flex-col justify-center gap-y-5 md:col-span-8 md:justify-between md:gap-y-3"
         >
           <div className="flex flex-col gap-y-5">
-            <p className=" text-lg font-normal md:text-4xl ">{heading}</p>
-            <p className=" text-lg font-normal md:text-xl">{description}</p>
-            <p className=" text-md font-normal md:text-lg">Venue : {venue}</p>
-            <p className=" text-md font-normal md:text-lg">Time : {time}</p>
-            <p className=" text-md font-normal md:text-lg">Date : {date}</p>
+            <p className="text-lg font-normal md:text-4xl">{heading}</p>
+            <p className="text-lg font-normal md:text-xl">{description}</p>
+            <p className="text-md font-normal md:text-lg">Venue: {venue}</p>
+            <p className="text-md font-normal md:text-lg">Time: {time}</p>
+            <p className="text-md font-normal md:text-lg">Date: {date}</p>
           </div>
           <div>
             <button
-              className="my-auto mr-auto rounded-[78px] bg-[#cf52ee] px-5 py-3 text-sm text-black md:px-8 md:py-3  md:text-lg"
+              className="my-auto mr-auto rounded-[78px] bg-[#cf52ee] px-5 py-3 text-sm text-black md:px-8 md:py-3 md:text-lg"
               onClick={() =>
                 window.open(
                   "https://www.linkedin.com/posts/iedc-cusat_innovateandelevate-entrepreneurship-cusat-activity-7179443628677771265-tCow",
@@ -123,9 +126,7 @@ const Card = ({ heading, icon, date, index, description, venue, time }) => {
             </button>
           </div>
         </div>
-        <div className=" hidden w-full md:col-span-1 md:block">
-          {/* <img src={icon2} alt="icon" className={` w-9 ml-auto }`} /> */}
-        </div>
+        <div className="hidden w-full md:col-span-1 md:block"></div>
       </div>
     </motion.div>
   );
@@ -155,7 +156,6 @@ const Events = () => {
           />
         ))}
       </div>
-      {/* <img src={arrowIcon} alt="arrow" className='w-24 md:w-36 mx-auto my-10 md:my-16 hover:opacity-55 cursor-pointer' /> */}
     </div>
   );
 };

@@ -37,7 +37,7 @@ export default function Hero () {
               </div>
               <div>
                 <img
-                  className="inline-block mt-28 hidden lg:block rounded-b-full rounded-t-full"
+                  className=" mt-28 hidden lg:block rounded-b-full rounded-t-full"
                   src="/images/progress.jpg" />
               </div>
             </div>

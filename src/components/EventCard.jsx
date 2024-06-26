@@ -1,4 +1,4 @@
-"use client"; 
+"use client";
 
 import { useEffect } from "react";
 import gsap from "gsap";
@@ -76,30 +76,32 @@ const EventCard = ({
 
   return (
     <motion.div
-      className="flex flex-col w-full gap-2 py-4 overflow-hidden cursor-pointer md:gap-4 md:py-6"
+      className="flex w-full cursor-pointer flex-col gap-2 overflow-hidden  py-4 md:gap-4 md:py-6"
       key={index}
       onMouseEnter={handleHover}
       onMouseLeave={handleHoverExit}
     >
-      <div className="grid flex-1 grid-cols-12 landing">
+      <div className="landing grid flex-1 grid-cols-12">
         <Image
           id={`img-${index}`}
           src={icon}
           alt="icon"
-          className="block w-full col-span-12 my-auto rounded-2xl md:col-span-4 md:w-11/12"
+          className="col-span-12 my-auto block w-full rounded-2xl md:col-span-4 md:w-11/12"
         />
         <div
           id={`text-${index}`}
-          className="flex flex-col justify-center col-span-12 gap-y-3 md:col-span-8 md:justify-between md:gap-y-2"
+          className="bg text- col-span-12 flex flex-col justify-center gap-y-3 text-emerald-950 md:col-span-8 md:justify-between md:gap-y-2"
         >
           <div className="flex flex-col gap-y-3">
             <p className="text-lg font-normal md:text-2xl">{heading}</p>
             <p className="text-lg font-normal md:text-lg">{description}</p>
             {showDetails && (
               <>
-                <p className="font-normal text-md md:text-base">Venue: {venue}</p>
-                <p className="font-normal text-md md:text-base">Time: {time}</p>
-                <p className="font-normal text-md md:text-base">Date: {date}</p>
+                <p className="text-md font-normal md:text-base">
+                  Venue: {venue}
+                </p>
+                <p className="text-md font-normal md:text-base">Time: {time}</p>
+                <p className="text-md font-normal md:text-base">Date: {date}</p>
               </>
             )}
           </div>

@@ -1,4 +1,5 @@
-import EventCard from './EventCard';
+"use client";
+import EventCard from "./EventCard";
 import Event1 from "../../public/images/Event1.jpeg";
 
 const upcomingEvent = {
@@ -34,16 +35,20 @@ const pastEvents = [
   },
 ];
 
-
 const Events = () => {
   return (
-    <div className="flex flex-col bg-[#003c43] px-4 py-6 md:px-12 md:py-16" id="events">
+    <div
+      className="flex flex-col bg-[#003c43] px-4 py-6 md:px-12 md:py-16"
+      id="events"
+    >
       <p className="w-full pb-4 text-center text-4xl font-normal uppercase !leading-tight text-[#ffffff] md:w-full md:text-6xl">
         EVENTS
       </p>
 
-      <h2 className="mb-4 text-2xl font-bold text-white md:text-3xl">Upcoming Event</h2>
-      <div className="p-4 mb-8 bg-white rounded-lg">
+      <h2 className="mb-4 text-2xl font-bold text-white md:text-3xl">
+        Upcoming Event
+      </h2>
+      <div className="mb-8 rounded-lg bg-emerald-50 p-4">
         <EventCard
           heading={upcomingEvent.heading}
           icon={upcomingEvent.icon}
@@ -58,10 +63,12 @@ const Events = () => {
         />
       </div>
 
-      <h2 className="mb-4 text-2xl font-bold text-white md:text-3xl">Past Events</h2>
+      <h2 className="mb-4 text-2xl font-bold text-white md:text-3xl">
+        Past Events
+      </h2>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         {pastEvents.map((event, index) => (
-          <div key={index} className="p-4 bg-white rounded-lg">
+          <div key={index} className="rounded-lg bg-white p-4">
             <EventCard
               heading={event.heading}
               icon={event.icon}

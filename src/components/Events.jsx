@@ -22,6 +22,7 @@ const pastEvents = [
     time: "3:00 PM",
     venue: "Venue 1",
   },
+
   {
     heading: "Past Event 2",
     description: "Description of past event 2.",
@@ -32,6 +33,7 @@ const pastEvents = [
     venue: "Venue 2",
   },
 ];
+
 
 const Events = () => {
   return (

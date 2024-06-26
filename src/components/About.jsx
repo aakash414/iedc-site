@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import tick from "../assets/check.png";
 import React from "react";

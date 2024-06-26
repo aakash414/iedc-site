@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import IEDCLogo from "../../public/images/iedc-logo.svg";
 

@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import IEDCLogo from "../../public/images/iedc-logo.svg";
 import Link from "next/link";
@@ -18,9 +20,9 @@ export default function Hero() {
               Entrepreneurship is the bridge between the spark of innovation and
               the fire of commercialization.
             </p>
-            <a className="rounded-full bg-[#D221FF] px-4 py-2 text-white hover:cursor-pointer hover:bg-[#cf52ee]">
+            <button className="rounded-full bg-[#D221FF] px-4 py-2 text-white hover:cursor-pointer hover:bg-[#cf52ee]">
               <Link href="#join-us">Join Us</Link>
-            </a>
+            </button>
           </div>
           <div className="mb-6 ml-0 mt-12 justify-center p-8 md:mb-0 md:ml-12 md:mt-0  lg:w-2/3">
             <div className="flex h-48 flex-wrap content-center  space-x-5">

@@ -1,4 +1,5 @@
 "use client";
+
 import EventCard from "./EventCard";
 import Event1 from "../../public/images/Event1.jpeg";
 

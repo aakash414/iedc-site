@@ -10,7 +10,7 @@ import Events from "@/components/Events";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Header />
       <Hero />
       <About />
@@ -20,6 +20,6 @@ export default function Home() {
       <Events />
       <Team />
       <Footer />
-    </div>
+    </>
   );
 }

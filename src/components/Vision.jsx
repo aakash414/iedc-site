@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import VisionCardComponent from "./VisionCardComponent";
 import ProfileIcon1 from "../../public/images/icon1.png";

@@ -76,7 +76,10 @@ function Info_text() {
 }
 export default function About() {
   return (
-    <div className="flex flex-col bg-[#E3FEF7] px-[10vw] py-[9vw]  md:flex-col lg:h-screen lg:flex-row">
+    <div
+      className="flex flex-col bg-[#E3FEF7] px-[10vw] py-[9vw]  md:flex-col lg:h-screen lg:flex-row"
+      id="about"
+    >
       <div className="w-full  bg-[#E3FEF7] md:h-full md:shrink">
         <div className="mx-auto  my-auto  flex">
           <Info_text />
